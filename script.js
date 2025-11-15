@@ -64,7 +64,7 @@ const newsItems = [
     { title: "Mr. Jogesh recieves best poster award",
       date: "November 6, 2024", 
       excerpt: "A big congratulations to our lab member Jogeswar Chhatria, who has been awarded the Best Poster in Theoretical Chemistry at the Chemistry In-House Symposium 2024 conducted by Department of Chemistry, Indian Institute of Technology, Madras.", 
-      imageUrl: "https://media.licdn.com/dms/image/v2/D5622AQFsTpi-yk5J4g/feedshare-shrink_800/feedshare-shrink_800/0/1730884396137?e=1762992000&v=beta&t=Kh6PMJ3rd7N-4lbIXIvmdpw6tOENiAxVDaXUzLQINxc" }
+      imageUrl: "https://media.licdn.com/dms/image/v2/D5622AQFsTpi-yk5J4g/feedshare-shrink_800/feedshare-shrink_800/0/1730884396137?e=1764806400&v=beta&t=Vwvb_vwuLLEcgolgx3cNx2ECn5hRVUw1GrQXVFAvZbE" }
 ];
     
 const galleryImages = [
@@ -455,6 +455,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Also ensure Feather icons are replaced for the new modal close button
     feather.replace();
 });
+
 
 
 
