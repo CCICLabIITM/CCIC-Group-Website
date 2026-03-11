@@ -14,7 +14,6 @@
     <style>
         body { 
             font-family: 'Inter', sans-serif; 
-            background-color: #f8fafc; /* Slate-50 to match News page */
         }
         
         /* Custom Scrollbar */
@@ -30,9 +29,10 @@
             border-bottom: 2px solid #2563EB; 
         }
 
-        /* Text Clamping */
-        .clamp-text { overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; }
-		/* Logo Animation Keyframes */
+        /* Text Clamping - Adjusted to 5 lines for balanced rectangular boxes */
+        .clamp-text { overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; }
+		
+        /* Logo Animation Keyframes */
         @keyframes shine {
             0% { background-position: 0% center; }
             100% { background-position: 200% center; }
@@ -50,7 +50,7 @@
         }
     </style>
 </head>
-<body class="bg-slate-50 text-gray-800">
+<body class="bg-white text-gray-800">
 
     <!-- Header Updated to match News/Home Roadmap style -->
     <header id="header" class="bg-white/80 backdrop-blur-md shadow-sm fixed top-0 left-0 right-0 z-50 transition-all duration-300">
@@ -107,14 +107,16 @@
 
     <!-- MAIN CONTENT -->
     <main class="pt-28 sm:pt-32 min-h-screen pb-12">
-        <section class="bg-white/95 backdrop-blur-md py-12 md:py-16 rounded-3xl mx-4 md:mx-auto container shadow-2xl">
-            <div class="px-6 md:px-12">
+        <section class="py-12 md:py-16 container mx-auto">
+            <div class="px-4 sm:px-6 md:px-8">
                 <div class="text-center mb-16">
                     <h1 id="page-title" class="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight">Our Research Focus Areas</h1>
                     <div class="h-1 w-24 bg-blue-600 mx-auto mt-6 mb-6 rounded-full"></div>
                     <p id="page-subtitle" class="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed"></p>
                 </div>
-                <div id="research-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                
+                <!-- Changed to max two in a row (md:grid-cols-2) -->
+                <div id="research-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
                     <!-- Cards are generated automatically -->
                 </div>
             </div>
@@ -273,7 +275,6 @@
                 
                 // Handle "Join Us" button specific style reset for mobile list
                 if(link.textContent.trim() === 'Join Us') {
-                     // Keep it consistent or style it differently? Let's keep it as a list item for consistency in mobile dropdown
                      clone.className = 'block py-3 px-6 text-gray-700 hover:bg-gray-50 border-l-4 border-transparent hover:border-blue-500';
                 }
 
@@ -296,16 +297,16 @@
 
             // 3. Color Map
             const colorClasses = {
-                blue: { bg: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-700' },
-                green: { bg: 'bg-green-50', border: 'border-green-200', text: 'text-green-700' },
-                yellow: { bg: 'bg-yellow-50', border: 'border-yellow-200', text: 'text-yellow-700' },
-                purple: { bg: 'bg-purple-50', border: 'border-purple-200', text: 'text-purple-700' },
-                red: { bg: 'bg-red-50', border: 'border-red-200', text: 'text-red-700' },
-                orange: { bg: 'bg-orange-50', border: 'border-orange-200', text: 'text-orange-700' },
-                teal: { bg: 'bg-teal-50', border: 'border-teal-200', text: 'text-teal-700' },
-                indigo: { bg: 'bg-indigo-50', border: 'border-indigo-200', text: 'text-indigo-700' },
-                pink: { bg: 'bg-pink-50', border: 'border-pink-200', text: 'text-pink-700' },
-                cyan: { bg: 'bg-cyan-50', border: 'border-cyan-200', text: 'text-cyan-700' }
+                blue: { bg: 'bg-blue-50/70', border: 'border-blue-100', hoverBorder: 'hover:border-blue-300', text: 'text-blue-700', shadow: 'hover:shadow-blue-500/15' },
+                green: { bg: 'bg-green-50/70', border: 'border-green-100', hoverBorder: 'hover:border-green-300', text: 'text-green-700', shadow: 'hover:shadow-green-500/15' },
+                yellow: { bg: 'bg-yellow-50/70', border: 'border-yellow-100', hoverBorder: 'hover:border-yellow-300', text: 'text-yellow-700', shadow: 'hover:shadow-yellow-500/15' },
+                purple: { bg: 'bg-purple-50/70', border: 'border-purple-100', hoverBorder: 'hover:border-purple-300', text: 'text-purple-700', shadow: 'hover:shadow-purple-500/15' },
+                red: { bg: 'bg-red-50/70', border: 'border-red-100', hoverBorder: 'hover:border-red-300', text: 'text-red-700', shadow: 'hover:shadow-red-500/15' },
+                orange: { bg: 'bg-orange-50/70', border: 'border-orange-100', hoverBorder: 'hover:border-orange-300', text: 'text-orange-700', shadow: 'hover:shadow-orange-500/15' },
+                teal: { bg: 'bg-teal-50/70', border: 'border-teal-100', hoverBorder: 'hover:border-teal-300', text: 'text-teal-700', shadow: 'hover:shadow-teal-500/15' },
+                indigo: { bg: 'bg-indigo-50/70', border: 'border-indigo-100', hoverBorder: 'hover:border-indigo-300', text: 'text-indigo-700', shadow: 'hover:shadow-indigo-500/15' },
+                pink: { bg: 'bg-pink-50/70', border: 'border-pink-100', hoverBorder: 'hover:border-pink-300', text: 'text-pink-700', shadow: 'hover:shadow-pink-500/15' },
+                cyan: { bg: 'bg-cyan-50/70', border: 'border-cyan-100', hoverBorder: 'hover:border-cyan-300', text: 'text-cyan-700', shadow: 'hover:shadow-cyan-500/15' }
             };
 
             // 4. Build Grid
@@ -314,23 +315,23 @@
                 const colors = colorClasses[area.color] || colorClasses.blue;
                 const card = document.createElement('div');
                 
-                // IMPORTANT: Applied colors.bg and colors.border to the MAIN card container
-                card.className = `research-card group cursor-pointer ${colors.bg} border ${colors.border} rounded-2xl text-left transition-all duration-300 flex flex-col hover:shadow-2xl hover:-translate-y-1 overflow-hidden h-full`;
+                // Enhanced, clean rectangular card design with subtle colored shadows
+                card.className = `research-card group cursor-pointer bg-white border ${colors.border} ${colors.hoverBorder} rounded-2xl text-left transition-all duration-500 flex flex-col shadow-sm hover:shadow-2xl ${colors.shadow} hover:-translate-y-1.5 overflow-hidden h-full`;
                 
                 // Helper to remove bolding asterisks for the preview card
                 const cleanDesc = area.description.replace(/\*/g, '');
 
+                // Beautifully separated image header and white text body
                 card.innerHTML = `
-                    <div class="relative overflow-hidden w-full h-48 p-4 border-b ${colors.border}">
-                        <!-- Used mix-blend-multiply so the image white bg disappears into the colored card -->
-                        <img src="${area.image}" alt="${area.title}" class="w-full h-full object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-110">
+                    <div class="relative overflow-hidden w-full h-60 md:h-64 p-8 ${colors.bg} flex items-center justify-center border-b ${colors.border}">
+                        <img src="${area.image}" alt="${area.title}" class="w-full h-full object-contain mix-blend-multiply transition-transform duration-700 group-hover:scale-105">
                     </div>
-                    <div class="p-6 flex-grow flex flex-col">
-                        <h2 class="text-lg font-bold text-gray-900 mb-3 leading-snug group-hover:text-blue-800 transition-colors">${area.title}</h2>
-                        <p class="text-gray-600 text-sm clamp-text mb-4 text-justify leading-relaxed">${cleanDesc}</p>
-                        <div class="mt-auto pt-4 border-t ${colors.border} flex items-center ${colors.text} font-semibold text-sm">
-                            <span>Read full details</span>
-                            <i data-feather="arrow-right" class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"></i>
+                    <div class="p-6 md:p-8 flex-grow flex flex-col bg-white">
+                        <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-4 leading-snug group-hover:${colors.text} transition-colors">${area.title}</h2>
+                        <p class="text-gray-600 text-base clamp-text mb-6 text-justify leading-relaxed">${cleanDesc}</p>
+                        <div class="mt-auto pt-5 border-t border-gray-100 flex items-center ${colors.text} font-bold text-xs uppercase tracking-wider">
+                            <span>Explore Research</span>
+                            <i data-feather="arrow-right" class="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-2"></i>
                         </div>
                     </div>
                 `;
@@ -390,11 +391,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
