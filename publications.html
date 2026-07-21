@@ -28,7 +28,7 @@
         }
         .publication-card {
             transition: all 0.3s ease-in-out;
-            border: 1px solid #f3f4f6; /* Subtle border */
+            /* Border removed to let random colors pop, handled in JS inline styles */
         }
         .nav-link {
             padding-bottom: 0.5rem;
@@ -37,7 +37,7 @@
         .modal-content {
             max-height: 90vh;
         }
-		/* Logo Animation Keyframes */
+        /* Logo Animation Keyframes */
         @keyframes shine {
             0% { background-position: 0% center; }
             100% { background-position: 200% center; }
@@ -207,8 +207,8 @@
     <script>
         // --- Publication Data ---
         const publicationsData = [
-			{
-				id: 1,
+            {
+                id: 1,
                 title: "Quantum Controlled Catalysis: The Role of Spin in the Electrochemical Reduction of Nitrate to Ammonia",
                 authors: "Aravind Vadakkayil, Sudhin Rathnakumaran, Fiham Fahim, Anisha Mondal, Sooraj Kunnikuruvan, Brian P Bloom, David H Waldeck",
                 journal: "ACS Catalysis",
@@ -218,7 +218,7 @@
                 image: "https://pubs.acs.org/cms/10.1021/acscatal.6c03454/asset/images/medium/cs6c03454_0005.gif"
             },
             {
-				id: 1,
+                id: 2,
                 title: "Overcoming Interfacial Kinetic Barriers in 5-Hydroxymethylfurfural Extraction Using Salt and Amphiphilic Modifiers in Water–Supercritical CO2 Biphasic Systems",
                 authors: "Jogeswar Chhatria, Sooraj Kunnikuruvan",
                 journal: "The Journal of Physical Chemistry B",
@@ -227,7 +227,8 @@
                 link: "https://doi.org/10.1021/acs.jpcb.6c02292",
                 image: "https://pubs.acs.org/cms/10.1021/acs.jpcb.6c02292/asset/images/medium/jp6c02292_0007.gif"
             },
-			{ id: 1,
+            { 
+                id: 3,
                 title: "High-Energy Ni-Rich LiNi0.85Co0.1Mn0.05O2 Cathode Material for Li-Ion Batteries Enhanced by Nd- and Y-Doping. A Structural, Electrochemical, and Thermal Investigation",
                 authors: "Yehonatan Levartovsky, Arup Chakraborty, Sooraj Kunnikuruvan, Sandipan Maiti, Judith Grinblat, Michael Talianker, Doron Aurbach and Dan Thomas Major",
                 journal: "ACS Applied Energy Materials",
@@ -237,7 +238,7 @@
                 image: "https://pubs.acs.org/cms/10.1021/acsaem.2c01731/asset/images/medium/ae2c01731_0016.gif"
             },
             {
-                id: 1,
+                id: 4,
                 title: "A Holey 2D MoS2-Based Membrane with Mo-Rich Edges for Water Desalination",
                 authors: "Biswajit Mondal, Sudhin Rathnakumaran, Amrita Chakraborty, Pragin Chettiyankandy, Pillalamarri Srikrishnarka, Md Rabiul Islam, Jenifer Shantha Kumar, Ramesh Kumar, Sandeep Bose, Sooraj Kunnikuruvan, Thalappil Pradeep",
                 journal: "ACS Applied Nano Materials",
@@ -247,7 +248,7 @@
                 image: "https://pubs.acs.org/cms/10.1021/acsanm.5c05244/asset/images/medium/an5c05244_0009.gif"
             },
             {
-                id: 2,
+                id: 5,
                 title: "Unveiling the Role of Ion Pairs in Determining Electrolyte Stability and Solid Electrolyte Interphase Formation in Lithium Metal Batteries",
                 authors: "M Buragohain, S Kunnikuruvan",
                 journal: "ACS Applied Energy Materials",
@@ -257,7 +258,7 @@
                 image: "https://pubs.acs.org/cms/10.1021/acsaem.5c02340/asset/images/medium/ae5c02340_0009.gif"
             },
             {
-                id: 3,
+                id: 6,
                 title: "Unraveling B, N Co-doping synergy in graphitic carbon nitride for efficient CO2 cycloaddition with styrene oxide",
                 authors: "Hafila S Khairun, Gazala Parveen, Ripsa Rani Nayak, Jogeswar Chhatria, Sooraj Kunnikuruvan, Navneet Kumar Gupta",
                 journal: "Journal of Catalysis",
@@ -267,7 +268,7 @@
                 image: "https://ars.els-cdn.com/content/image/1-s2.0-S0021951725004658-ga1.jpg"
             },
             {
-                id: 4,
+                id: 7,
                 title: "A Review on the Applications of “Catalysis Under 2D-Cover” for Small Molecule Activation",
                 authors: "Athira Jayasankar, Sooraj Kunnikuruvan",
                 journal: "Journal of the Indian Institute of Science",
@@ -277,7 +278,7 @@
                 image: "https://media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs41745-025-00481-9/MediaObjects/41745_2025_481_Fig1_HTML.png?as=webp"
             },
             {
-                id: 5,
+                id: 8,
                 title: "Orchestrating Multiple Aryl Rearrangements: Deciphering the Dynamics of Competitive Shifts and Shuttles on Four Carbons",
                 authors: "Nagaraju Ponugoti, Jogeswar Chhatria, Sooraj Kunnikuruvan, Parthasarathy Venkatakrishnan",
                 journal: "The Journal of Organic Chemistry",
@@ -287,7 +288,7 @@
                 image: "https://pubs.acs.org/cms/10.1021/acs.joc.5c00596/asset/images/medium/jo5c00596_0012.gif"
             },
             {
-                id: 6,
+                id: 9,
                 title: "Self‐Healing, Ga‐Sb Alloy Confined Sn Anode for Stable Na‐Ion Storage in Glyme Based Electrolytes",
                 authors: "Dimpal Deori, Madhurja Buragohain, Youhyun Son, Sooraj Kunnikuruvan, Ashok Kumar Nanjundan, Philipp Adelhelm, Thangavelu Palaniselvam",
                 journal: "Small",
@@ -297,7 +298,7 @@
                 image: "https://onlinelibrary.wiley.com/cms/asset/5b1bcd97-f6ff-43dc-8861-0722e297600f/smll202504185-fig-0008-m.png"
             },
             {
-                id: 7,
+                id: 10,
                 title: "Electrochemical Nitrate Reduction to Ammonia using γ-Fe2O3/BCN in a Neutral Medium",
                 authors: "Soniya Mariya Varghese, Anju Vakakuzhiyil Gopinathan, Sudhin Rathnakumaran, Suraj Sasikumar, Sooraj Kunnikuruvan, Ranga Rao Gangavarapu",
                 journal: "ACS Catalysis",
@@ -307,7 +308,7 @@
                 image: "https://pubs.acs.org/cms/10.1021/acscatal.5c00936/asset/images/medium/cs5c00936_0009.gif"
             },
             {
-                id: 8,
+                id: 11,
                 title: "Computational and Experimental Insights on the Role of ZnO Nanoplatelets Coated Separator in Stabilizing Lithium Metal Anodes",
                 authors: "Ankush Kumar Singh, Rashmi Yadav, Madhurja Buragohain, Sooraj Kunnikuruvan, Rosy",
                 journal: "Small",
@@ -317,7 +318,7 @@
                 image: "https://onlinelibrary.wiley.com/cms/asset/9d99f0e0-92dc-4754-9332-6f90370a5045/smll202505175-fig-0001-m.png"
             },
             {
-                id: 9,
+                id: 12,
                 title: "Doping Strategies in Ni-Rich NCM Cathode Materials for Next-Generation Li-Ion Batteries: A Systematic Computational Study",
                 authors: "Arup Chakraborty, Amreen Bano, Sooraj Kunnikuruvan, Boris Markovsky, Doron Aurbach, Dan Thomas Major",
                 journal: "ACS Applied Energy Materials",
@@ -327,7 +328,7 @@
                 image: "https://pubs.acs.org/cms/10.1021/acsaem.5c01325/asset/images/medium/ae5c01325_0012.gif"
             },
             {
-                id: 10,
+                id: 13,
                 title: "π-Functionalized 1,5-diazocines with diverse intramolecular connectivities to modulate photophysical and electroluminescence properties",
                 authors: "Anjitha Sebastian, Simi Achankunju, Swetha Nair, Kavya Rajeev, Anju Vakakuzhiyil Gopinathan, Vijay Kumar Maka, Sooraj Kunnikuruvan, Narayanan Unni KN, Keshaba Nanda Parida, Ishita Neogi",
                 journal: "Journal of Materials Chemistry C",
@@ -337,7 +338,7 @@
                 image: "https://pubs.rsc.org/en/Image/Get?imageInfo.ImageType=GA&imageInfo.ImageIdentifier.ManuscriptID=D4TC05509H&imageInfo.ImageIdentifier.Year=2025"
             },
             {
-                id: 11,
+                id: 14,
                 title: "Fluorine-rich interface for garnet-based high-performance all-solid-state lithium batteries",
                 authors: "Shruti Suriyakumar, Indu M Santhakumari, Souvik Ghosh, Anju Vakakuzhiyil Gopinathan, Sooraj Kunnikuruvan, Manikoth M Shaijumon",
                 journal: "Chemical Science",
@@ -347,7 +348,7 @@
                 image: "https://pubs.rsc.org/en/Image/Get?imageInfo.ImageType=GA&imageInfo.ImageIdentifier.ManuscriptID=D5SC01107H&imageInfo.ImageIdentifier.Year=2025"
             },
             {
-                id: 12,
+                id: 15,
                 title: "Nanostructured Ternary Bismuth–Antimony Trichalcogenide/Au Heterostructure Boosts Electrocatalytic Hydrogen Evolution Reaction",
                 authors: "Naduvile Purayil Dileep, Mithun C Madhusudhanan, Lakshmi K Puthenveettil, Vipin Yadav, Stephen N Myakala, Sooraj Kunnikuruvan, Manikoth M Shaijumon",
                 journal: "ACS Applied Energy Materials",
@@ -357,7 +358,7 @@
                 image: "https://pubs.acs.org/cms/10.1021/acsaem.4c00046/asset/images/medium/ae4c00046_0008.gif"
             },
             {
-                id: 13,
+                id: 16,
                 title: "Mononuclear phenoxy-imine Mg (II) compounds as catalysts for the ring-opening copolymerization of epoxides with CO2",
                 authors: "Sourav Singha Roy, Sriparna Sarkar, Nikitha Srinivasan, PK Sudhadevi Antharjanam, Sooraj Kunnikuruvan, Debashis Chakraborty",
                 journal: "Materials Today Chemistry",
@@ -367,7 +368,7 @@
                 image: "https://ars.els-cdn.com/content/image/1-s2.0-S2468519424004361-ga1.jpg"
             },
             {
-                id: 14,
+                id: 17,
                 title: "Computational insights into selective glucose to 5-hydroxymethylfurfural (HMF) conversion by reducing humins formation in aqueous media under Brønsted acid-catalyzed conditions",
                 authors: "Jogeswar Chhatria, Swetha Nair, Sankari Nattuvetty Sunil Kumar, Sooraj Kunnikuruvan",
                 journal: "Physical Chemistry Chemical Physics",
@@ -377,7 +378,7 @@
                 image: "https://pubs.rsc.org/en/Image/Get?imageInfo.ImageType=GA&imageInfo.ImageIdentifier.ManuscriptID=D4CP03032J&imageInfo.ImageIdentifier.Year=2024"
             },
             {
-                id: 15,
+                id: 18,
                 title: "Revisiting the Relation Between the Stability of the LUMO of the Electrolytes and the Kinetics of Solid Electrolyte Interface Formation in Lithium‐and Post‐Lithium‐ion Batteries",
                 authors: "Mithun C Madhusudhanan, Sreelakshmi Anil Kumar, Swetha Nair, Nikitha Srinivasan, Madhurja Buragohain, Sooraj Kunnikuruvan",
                 journal: "Batteries & Supercaps",
@@ -387,7 +388,7 @@
                 image: "https://chemistry-europe.onlinelibrary.wiley.com/cms/asset/7d0b8233-d866-4a08-8a55-c4f369122524/batt202200430-toc-0001-m.png"
             },
             {
-                id: 16,
+                id: 19,
                 title: "Topochemical syntheses of polyarylopeptides involving large molecular motions: Frustrated monomer packing leads to the formation of polymer blends",
                 authors: "Cijil Raju, Kozhukunnon Mridula, Nikitha Srinivasan, Sooraj Kunnikuruvan, Kana M Sureshan",
                 journal: "Angewandte Chemie",
@@ -397,7 +398,7 @@
                 image: "https://onlinelibrary.wiley.com/cms/asset/e8000c62-cb33-41ae-a088-5fe8a55ae151/ange202306504-toc-0001-m.png"
             },
             {
-                id: 17,
+                id: 20,
                 title: "Topochemical cycloaddition reaction between an azide and an internal alkyne",
                 authors: "Cijil Raju, Sooraj Kunnikuruvan, Kana M Sureshan",
                 journal: "Angewandte Chemie",
@@ -406,8 +407,8 @@
                 link: "https://doi.org/10.1002/ange.202210453",
                 image: "https://onlinelibrary.wiley.com/cms/asset/f2b7bc77-b0b1-4472-9636-44ca5f025ecf/ange202210453-toc-0001-m.jpg"
             },
-			{
-                id: 18,
+            {
+                id: 21,
                 title: "Predicting Electrolyte Stability in Lithium and Post-Lithium Metal Batteries: The Failure of Linear Single Descriptor-Based Models",
                 authors: "Sudhin Rathnakumaran, Madhurja Buragohain, Soumya U. Kuzhupullimadom, Amiya Paul, Nikitha Srinivasan, Stuti Gupta and Sooraj Kunnikuruvan",
                 journal: "The Journal of Physical Chemistry B",
@@ -416,8 +417,8 @@
                 link: "https://pubs.acs.org/doi/10.1021/acs.jpcb.5c08140",
                 image: "https://pubs.acs.org/cms/10.1021/acs.jpcb.5c08140/asset/images/medium/jp5c08140_0007.gif"
             },
-			{
-                id: 19,
+            {
+                id: 22,
                 title: "Effect of HMPA on the Ground and Excited State Reactivity of SmI2",
                 authors: "Suranjan De, Athira Jayasankar, Sooraj Kunnikuruvan, Sandeepan Maity",
                 journal: "European Journal of Organic Chemistry",
@@ -459,29 +460,35 @@
         }
 
         function createPublicationCard(pub) {
+            // Generate a random, pleasing pastel color (high lightness, medium saturation)
+            const randomHue = Math.floor(Math.random() * 360);
+            const randomBgColor = `hsl(${randomHue}, 75%, 93%)`;
+            const borderColor = `hsl(${randomHue}, 60%, 85%)`;
+
             return `
                 <div onclick="openPublicationModal(${pub.id})" data-pub-id="${pub.id}"
-                    class="publication-card flex flex-col h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer">
+                    class="publication-card flex flex-col h-full rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden cursor-pointer"
+                    style="background-color: ${randomBgColor}; border: 1px solid ${borderColor};">
                     
-                    <div class="w-full h-48 bg-gray-50 border-b border-gray-100 p-4 flex items-center justify-center">
+                    <div class="w-full h-48 bg-white/50 border-b p-4 flex items-center justify-center backdrop-blur-sm" style="border-color: ${borderColor};">
                         <img src="${pub.image}" 
                             onerror="this.onerror=null; this.src='https://placehold.co/400x300/e5e7eb/6b7280?text=Abstract'"
                             alt="Graphical abstract for ${pub.title}" 
-                            class="w-full h-full object-contain rounded-lg">
+                            class="w-full h-full object-contain rounded-lg drop-shadow-sm">
                     </div>
                     
                     <div class="p-4 flex flex-col flex-grow">
                         <div>
-                            <h3 class="text-sm font-semibold text-gray-900 leading-snug mb-2 line-clamp-3">
+                            <h3 class="text-sm font-bold text-gray-900 leading-snug mb-2 line-clamp-3">
                                 ${pub.title}
                             </h3>
-                            <p class="text-xs text-gray-600 mb-2 line-clamp-2">
+                            <p class="text-xs text-gray-700 font-medium mb-2 line-clamp-2">
                                 ${pub.authors}
                             </p>
                         </div>
-                        <div class="mt-auto pt-2 border-t border-gray-50">
-                             <p class="text-xs font-medium text-blue-700">
-                                ${pub.journal} <span class="text-gray-500">(${pub.year})</span>
+                        <div class="mt-auto pt-2 border-t" style="border-color: ${borderColor};">
+                             <p class="text-xs font-bold text-blue-900">
+                                ${pub.journal} <span class="text-gray-600 font-medium">(${pub.year})</span>
                             </p>
                         </div>
                     </div>
@@ -541,11 +548,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
