@@ -22,7 +22,7 @@
             padding-bottom: 0.5rem;
             border-bottom: 2px solid transparent;
         }
-		/* Logo Animation Keyframes */
+        /* Logo Animation Keyframes */
         @keyframes shine {
             0% { background-position: 0% center; }
             100% { background-position: 200% center; }
@@ -113,46 +113,72 @@
                     <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Our group is composed of dedicated researchers and students passionate about advancing computational chemistry</p>
                 </div>
                 
-                <div class="mb-16">
-                    <h3 class="text-2xl font-bold text-center mb-8"> </h3>
-                     <div class="max-w-2xl mx-auto bg-white rounded-xl p-6 md:p-8 flex flex-col md:flex-row items-start space-y-6 md:space-y-0 md:space-x-8 shadow-lg mb-16 border border-gray-100 hover:shadow-xl transition-shadow">
-                        <div class="flex-shrink-0 mx-auto md:mx-0">
-                             <img src="IMAGE/PROFILE/soorajK.jpg" onerror="this.onerror=null;this.src='https://placehold.co/150x150/666/fff?text=SK';" alt="Dr. Sooraj Kunnikuruvan" class="w-40 h-40 rounded-full object-cover border-4 border-blue-50 shadow-md">
-                        </div>
-                        <div class="flex-grow text-center md:text-left">
-                            <h4 class="text-2xl font-bold text-gray-900">Dr. Sooraj Kunnikuruvan</h4>
-                            <p class="text-blue-600 font-bold text-lg mb-4">Principal Investigator</p>
-                           
-                            <div class="space-y-3 text-sm text-gray-700">
-                                <div class="flex flex-col md:flex-row md:space-x-2">
-                                    <span class="font-bold text-gray-900 md:w-48 flex-shrink-0">Assistant Professor <br class="hidden md:block"><span class="font-normal text-xs text-gray-500">(May 2022-)</span></span>
-                                    <span class="text-gray-600">Department of Chemistry, IIT Madras</span>
-                                </div>
-                                <div class="flex flex-col md:flex-row md:space-x-2 border-t border-gray-100 pt-2">
-                                    <span class="font-bold text-gray-900 md:w-48 flex-shrink-0">Inspire Faculty Fellow <br class="hidden md:block"><span class="font-normal text-xs text-gray-500">(Oct 2020 - May 2022)</span></span>
-                                    <span class="text-gray-600">School of Chemical Sciences, IISER Thiruvananthapuram</span>
-                                </div>
-                                <div class="flex flex-col md:flex-row md:space-x-2 border-t border-gray-100 pt-2">
-                                    <span class="font-bold text-gray-900 md:w-48 flex-shrink-0">Post-doctoral Fellow <br class="hidden md:block"><span class="font-normal text-xs text-gray-500">(Feb 2018 - Aug 2020)</span></span>
-                                    <span class="text-gray-600">Department of Chemistry, Bar-Ilan University</span>
-                                </div>
-                                <div class="flex flex-col md:flex-row md:space-x-2 border-t border-gray-100 pt-2">
-                                    <span class="font-bold text-gray-900 md:w-48 flex-shrink-0">PhD <br class="hidden md:block"><span class="font-normal text-xs text-gray-500">(Jul 2011- Sep 2017)</span></span>
-                                    <span class="text-gray-600">Department of Chemistry, IIT Kanpur</span>
-                                </div>
-                            </div>
-
-                            <div class="flex items-center justify-center md:justify-start space-x-4 mt-6">
-                                <a href="https://www.linkedin.com/in/sooraj-kunnikuruvan-940657268/" target="_blank" class="text-gray-500 hover:text-blue-700 transition-colors bg-gray-50 p-2 rounded-full hover:bg-blue-50">
+                <div class="mb-20">
+                    <!-- Redesigned, Space-Utilizing & Colorful PI Card -->
+                    <div class="max-w-5xl mx-auto bg-gradient-to-br from-blue-50 via-white to-indigo-50 rounded-2xl p-6 md:p-10 flex flex-col md:flex-row items-center md:items-stretch space-y-8 md:space-y-0 md:space-x-12 shadow-xl border border-blue-100 hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
+                        
+                        <!-- Decorative background element -->
+                        <div class="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-blue-400/10 to-purple-400/10 rounded-full blur-3xl -z-10 translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
+                        
+                        <!-- Image and Contact Column -->
+                        <div class="flex-shrink-0 flex flex-col items-center justify-center w-full md:w-auto relative z-10">
+                            <img src="IMAGE/PROFILE/soorajK.jpg" onerror="this.onerror=null;this.src='https://placehold.co/200x200/666/fff?text=SK';" alt="Dr. Sooraj Kunnikuruvan" class="w-48 h-48 rounded-full object-cover border-4 border-white shadow-lg ring-4 ring-blue-100">
+                            
+                            <!-- Contact Links -->
+                            <div class="mt-6 flex items-center justify-center space-x-4">
+                                <a href="https://www.linkedin.com/in/sooraj-kunnikuruvan-940657268/" target="_blank" class="text-gray-600 hover:text-blue-700 bg-white/80 backdrop-blur-sm p-3 rounded-full shadow-sm border border-blue-50 hover:bg-blue-100 transition-all duration-300" title="LinkedIn">
                                     <i data-feather="linkedin" class="w-5 h-5"></i>
                                 </a>
-                                <a href="mailto:soorajk@iitm.ac.in" class="text-gray-500 hover:text-blue-700 transition-colors bg-gray-50 p-2 rounded-full hover:bg-blue-50">
+                                <a href="mailto:soorajk@iitm.ac.in" class="text-gray-600 hover:text-blue-700 bg-white/80 backdrop-blur-sm p-3 rounded-full shadow-sm border border-blue-50 hover:bg-blue-100 transition-all duration-300" title="Email">
                                     <i data-feather="mail" class="w-5 h-5"></i>
                                 </a>
                             </div>
                         </div>
+
+                        <!-- Details and Timeline Grid Column -->
+                        <div class="flex-grow flex flex-col justify-center w-full relative z-10">
+                            <div class="text-center md:text-left mb-8">
+                                <h4 class="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-700 mb-2">Dr. Sooraj Kunnikuruvan</h4>
+                                <p class="text-blue-600 font-bold text-sm tracking-widest uppercase">Principal Investigator</p>
+                            </div>
+                            
+                            <!-- Timeline utilizing space via CSS Grid -->
+                            <div class="grid grid-cols-1 xl:grid-cols-2 gap-4 w-full">
+                                <div class="bg-white/80 backdrop-blur-sm p-5 rounded-xl shadow-sm border-l-4 border-blue-500 hover:bg-blue-50/50 transition-colors">
+                                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1">
+                                        <span class="font-bold text-gray-900 text-base">Assistant Professor</span>
+                                        <span class="font-medium text-xs text-blue-700 bg-blue-100 px-2.5 py-1 rounded-full mt-2 sm:mt-0 w-max">May 2022 - Present</span>
+                                    </div>
+                                    <span class="text-gray-600 text-sm block">Department of Chemistry, IIT Madras</span>
+                                </div>
+                                
+                                <div class="bg-white/80 backdrop-blur-sm p-5 rounded-xl shadow-sm border-l-4 border-indigo-500 hover:bg-indigo-50/50 transition-colors">
+                                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1">
+                                        <span class="font-bold text-gray-900 text-base">Inspire Faculty Fellow</span>
+                                        <span class="font-medium text-xs text-indigo-700 bg-indigo-100 px-2.5 py-1 rounded-full mt-2 sm:mt-0 w-max">Oct 2020 - May 2022</span>
+                                    </div>
+                                    <span class="text-gray-600 text-sm block">School of Chemical Sciences, IISER Thiruvananthapuram</span>
+                                </div>
+                                
+                                <div class="bg-white/80 backdrop-blur-sm p-5 rounded-xl shadow-sm border-l-4 border-purple-500 hover:bg-purple-50/50 transition-colors">
+                                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1">
+                                        <span class="font-bold text-gray-900 text-base">Post-doctoral Fellow</span>
+                                        <span class="font-medium text-xs text-purple-700 bg-purple-100 px-2.5 py-1 rounded-full mt-2 sm:mt-0 w-max">Feb 2018 - Aug 2020</span>
+                                    </div>
+                                    <span class="text-gray-600 text-sm block">Department of Chemistry, Bar-Ilan University</span>
+                                </div>
+                                
+                                <div class="bg-white/80 backdrop-blur-sm p-5 rounded-xl shadow-sm border-l-4 border-pink-500 hover:bg-pink-50/50 transition-colors">
+                                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1">
+                                        <span class="font-bold text-gray-900 text-base">PhD</span>
+                                        <span class="font-medium text-xs text-pink-700 bg-pink-100 px-2.5 py-1 rounded-full mt-2 sm:mt-0 w-max">Jul 2011 - Sep 2017</span>
+                                    </div>
+                                    <span class="text-gray-600 text-sm block">Department of Chemistry, IIT Kanpur</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                   
+                    
                     <h3 class="text-2xl font-bold text-center mb-8">Group Members</h3>
                     <div id="team-members-list" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-12">
                         <!-- JS populated -->
@@ -161,7 +187,7 @@
                 
                 <div>
                     <h3 class="text-2xl font-bold text-center mb-8">Alumni</h3>
-                   
+                    
                     <!-- Postdoctoral Researchers Section -->
                     <div class="mb-12">
                         <h4 class="text-xl font-semibold text-center text-gray-700 mb-6">Postdoctoral Researchers</h4>
@@ -243,12 +269,12 @@
                 researchArea: "Research Area: Machine learning guided electrode design for Li and post-Li ion batteries", linkedin: "https://www.linkedin.com/in/devanand-c-s-418466222/", 
                 email: "ic43373@imail.iitm.ac.in", imageUrl: "IMAGE/PROFILE/devanand.jpeg"
             },
-			{ 
+            { 
                 name: "Kanishkaa Sambyal", role: "M.Sc Project Student", joiningDate: "August 2026",
                 researchArea: "Research Area: ", linkedin: "https://www.linkedin.com/in/kanishkaa-sambyal-6557a3279/", 
                 email: "CY25C036@smail.iitm.ac.in", imageUrl: "IMAGE/PROFILE/kanishka.jpeg"
             },
-		    { 
+            { 
                 name: "Akash Pandey", role: "M.Sc Project Student", joiningDate: "August 2026",
                 researchArea: "Research Area: ", linkedin: "https://www.linkedin.com/in/akash-pandey-2b1a26338/", 
                 email: "CY25C004@smail.iitm.ac.in", imageUrl: "IMAGE/PROFILE/akash.jpeg"
@@ -268,9 +294,9 @@
         const mscAlumni = [
             { name: "Stuti Gupta", role: "PhD @ CCIC Lab", where: "MSc, 2025", imageUrl: "IMAGE/PROFILE/stuti.jpg" },
             { name: "Amiya Paul", role: "PhD @ University of North Carolina at Chapel Hill", where: "MSc, 2024", imageUrl: "https://scholar.googleusercontent.com/citations?view_op=view_photo&user=xU_vse4AAAAJ&citpid=2" },
-			{ name: "Ankan Kamila", role: "Junior Research Fellow @IIT Kharagpur",where: "MSc, 2026", joiningDate: "July 2025", linkedin: "https://www.linkedin.com/in/ankan-kamila-25a615354/", 
+            { name: "Ankan Kamila", role: "Junior Research Fellow @IIT Kharagpur",where: "MSc, 2026", joiningDate: "July 2025", linkedin: "https://www.linkedin.com/in/ankan-kamila-25a615354/", 
              email: "cy24c013@smail.iiitm.ac.in", imageUrl: "IMAGE/PROFILE/ankan.jpg" },
-			{name: "Himadri Mittal", role: "Senior Lecturer @Magarishi Global Education Private Limited, Kilpuak, Chennai",where: "MSc, 2026", joiningDate: "July 2025", linkedin: "https://www.linkedin.com/in/mittalhimadri15/", 
+            {name: "Himadri Mittal", role: "Senior Lecturer @Magarishi Global Education Private Limited, Kilpuak, Chennai",where: "MSc, 2026", joiningDate: "July 2025", linkedin: "https://www.linkedin.com/in/mittalhimadri15/", 
              email: "cy24c033@smail.iiitm.ac.in", imageUrl: "IMAGE/PROFILE/himadri.jpg" },
         ];
         
@@ -288,7 +314,7 @@
             if (!list) return;
 
             list.innerHTML = '';
-           
+            
             // If list is empty, optionally show a placeholder message
             if (members.length === 0) {
                  list.innerHTML = '<div class="col-span-full text-center text-gray-500 italic">No alumni listed yet.</div>';
@@ -307,7 +333,7 @@
                 if (member.joiningDate) {
                     description += `<p class="text-gray-500 text-sm mt-1">Joined: ${member.joiningDate}</p>`;
                 }
-               
+                
                 if (member.researchArea) {
                     description += `<p class="text-gray-600 text-sm mt-1 italic font-medium">${member.researchArea}</p>`;
                 }
@@ -382,4 +408,3 @@
     </script>
 </body>
 </html>
-
