@@ -83,7 +83,7 @@
                         </a>
                     </div>
                 </div>
-               
+                
                 <!-- Desktop Nav (Visible from 700px upwards) -->
                 <nav class="hidden min-[700px]:flex items-center space-x-2 lg:space-x-6" data-current-page="course">
                     <a href="index.html" class="nav-link text-gray-600 hover:text-blue-600 font-medium transition-colors text-xs lg:text-sm font-semibold whitespace-nowrap">Home</a>
@@ -95,8 +95,8 @@
                      <a href="softwares.html" class="nav-link text-gray-600 hover:text-blue-600 font-medium transition-colors text-xs lg:text-sm font-semibold whitespace-nowrap">Tools</a>
                      <a href="news.html" class="nav-link text-gray-600 hover:text-blue-600 font-medium transition-colors text-xs lg:text-sm font-semibold whitespace-nowrap">News</a>
                     <a href="gallery.html" class="nav-link text-gray-600 hover:text-blue-600 font-medium transition-colors text-xs lg:text-sm font-semibold whitespace-nowrap">Gallery</a>
-                   
-                   
+                    
+                    
                     <a href="contact.html" class="bg-blue-600 text-white px-3 py-1.5 lg:px-5 lg:py-2 rounded-full hover:bg-blue-700 transition-all text-xs lg:text-sm font-bold shadow-md shadow-blue-100 whitespace-nowrap">Join Us</a>
                 </nav>
 
@@ -149,48 +149,57 @@
     </footer>
     
     <script>
+        // Calculate the current session (Autumn/Spring) and year dynamically
+        const currentDate = new Date();
+        const currentYear = currentDate.getFullYear();
+        const currentMonth = currentDate.getMonth(); // 0 is January, 11 is December
+        
+        // Assuming Spring is Jan-Jun (months 0-5) and Autumn is Jul-Dec (months 6-11)
+        const currentSession = currentMonth >= 6 ? "Autumn" : "Spring";
+        const dynamicSemester = `${currentSession} ${currentYear}`;
+
         const courses = [
             {
                 level: "B.Tech",
                 code: "CY1001",
                 title: "Chemistry: Principles, Structure, Reactivity and Applications",
-                semester: "Autumn 2026",
+                semester: dynamicSemester,
             },
             {
                 level: "BS-MS",
                 code: "CY1013",
                 title: "Mathematics-I",
-                semester: "Autumn 2026",
+                semester: dynamicSemester,
             },
             {
                 level: "M.Sc & Ph.D",
                 code: "CY5017",
                 title: "Principles of Quantum Mechanics",
-                semester: "Autumn 2026",
+                semester: dynamicSemester,
             },
             {
                 level: "M.Sc & Ph.D",
                 code: "CY5018",
                 title: "Chemical Bonding and Group Theory",
-                semester: "Spring 2026",
+                semester: dynamicSemester,
             },
             {
                 level: "M.Sc & Ph.D",
                 code: "CY5021",
                 title: "Introductory Computational Chemistry Laboratory",
-                semester: "Autumn 2026",
+                semester: dynamicSemester,
             },
             {
                 level: "M.Sc & Ph.D",
                 code: "CY6128",
                 title: "Computational Quantum Chemistry and Molecular Simulations",
-                semester: "Autumn 2026",
+                semester: dynamicSemester,
             },
             {
                 level: "BS-MS",
                 code: "CY1022",
                 title: "Mathematics-II",
-                semester: "Autumn 2026",
+                semester: dynamicSemester,
             }
         ];
 
